@@ -1,0 +1,12 @@
+{
+  "name": "@nuxtjs/sitemap",
+  "version": "1.0.0",
+  "description": "Sitemap Module for Nuxt.js",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/NicoPennec/nuxt-sitemap",
+  "homepage": "https://github.com/NicoPennec/nuxt-sitemap",
+  "dependencies": {
+    "sitemap": "^1.13.0"
+  }
+}
