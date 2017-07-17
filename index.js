@@ -1,6 +1,7 @@
 const sm = require('sitemap')
 const { hostname } = require('os').hostname
 
+const protocol = process.env.PROTOCOL || process.env.npm_package_config_nuxt_protocol || 'http'
 const port = process.env.PORT || process.env.npm_package_config_nuxt_port || 3000
 let host = process.env.HOST || process.env.npm_package_config_nuxt_host || 'localhost'
 if (host === '0.0.0.0') {
@@ -10,7 +11,7 @@ if (host === '0.0.0.0') {
 module.exports = async function nuxtSitemap (options) {
   // Defaults
   const defaults = {
-    hostname: `http://${host}:${port}/`,
+    hostname: `${protocol}://${host}:${port}/`,
     routes: []
   }
 
